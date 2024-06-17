@@ -1,0 +1,91 @@
+add_newline = false
+
+command_timeout = 5000
+
+format = """\
+[](bg:#030B16 fg:#7DF9AA)\
+$os$username\
+[](fg:#7DF9AA bg:#3B76F0)\
+$directory\
+[](fg:#3B76F0 bg:#FCF392)\
+$git_branch\
+$git_status\
+$git_metrics\
+[](bg:#030B16 fg:#FCF392)\
+$character\
+$all\
+"""
+
+[os]
+format = '[$symbol]($style)'
+style = "bg:#7DF9AA fg:#090c0c"
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+
+# Shows the username
+[username]
+style_user = "bg:#7DF9AA fg:#090c0c"
+style_root = "bg:#7DF9AA fg:#090c0c"
+format = '[ $user]($style)'
+disabled = false
+show_always = true
+
+[directory]
+format = "[  $path$read_only]($style)"
+style = "fg:#E4E4E4 bg:#3B76F0"
+truncation_symbol = '…/'
+home_symbol = '󰋜 ~'
+read_only = '  '
+
+[git_branch]
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+symbol = "  "
+style = "fg:#1C3A5E bg:#FCF392"
+truncation_symbol = '…/'
+
+[git_status]
+format = '([\($all_status$ahead_behind\)]($style))'
+style = "fg:#1C3A5E bg:#FCF392"
+conflicted = ' confliced=${count}(red) '
+up_to_date = '󰘽 up-to-date(green) '
+untracked = '󰋗 untracked=${count}(red) '
+ahead = ' ahead=${count}'
+diverged = ' ahead=${ahead_count}  behind=${behind_count}'
+behind = ' behind=${count}'
+stashed = ' stashed=${count}(green) '
+modified = '󰛿 modified=${count}(yellow) '
+staged = '󰐗 staged=${count}(green) '
+renamed = '󱍸 renamed=${count}(yellow) '
+deleted = '󰍶 deleted=${count}(red) '
+
+[git_metrics]
+format = "([+$added]($added_style))[]($added_style)"
+added_style = "fg:#1C3A5E bg:#FCF392"
+deleted_style = "fg:bright-red bg:235"
+disabled = false
+
+[hg_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+
+[cmd_duration]
+format = "[  $duration ]($style)"
+style = "fg:bright-white bg:18"
+
+[character]
+success_symbol = '[ ➜](bold green) '
+error_symbol = '[ ✗](#E84D44) '
+
+[java]
+format = "[](bg:#030B16 fg:#fc92a4)[on $symbol$version]($style)[](bg:#030B16 fg:#fc92a4)"
+style = "fg:#1C3A5E bg:#fc92a4"
+
+[docker_context]
+format = "[](bg:#030B16 fg:#fc92a4)[on $symbol$version]($style)[](bg:#030B16 fg:#fc92a4)"
+style = "fg:#1C3A5E bg:#fc92a4"
+symbol = " "
