@@ -89,3 +89,17 @@ style = "fg:#1C3A5E bg:#fc92a4"
 format = "[](bg:#030B16 fg:#fc92a4)[on $symbol$version]($style)[](bg:#030B16 fg:#fc92a4)"
 style = "fg:#1C3A5E bg:#fc92a4"
 symbol = " "
+
+[python]
+format = "[](bg:#030B16 fg:#fc92a4)[on $symbol$version]($style)[](bg:#030B16 fg:#fc92a4)"
+style = "fg:#1C3A5E bg:#fc92a4"
+symbol = " "
+
+[golang]
+format = "[](bg:#030B16 fg:#fc92a4)[on $symbol$version]($style)[](bg:#030B16 fg:#fc92a4)"
+style = "fg:#1C3A5E bg:#fc92a4"
+symbol = " "
+
+[nodejs]
+format = "[](bg:#030B16 fg:#fc92a4)[on $symbol$version]($style)[](bg:#030B16 fg:#fc92a4)"
+style = "fg:#1C3A5E bg:#fc92a4"
